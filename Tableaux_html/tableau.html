@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./tableau.css" />
+	</head>
+	<body>
+		<table>
+			<caption>
+				Mon carnet d'anniversaire
+			</caption>
+			<tr>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Date de naissance</th>
+			</tr>
+			<tr>
+				<td>Fernandez</td>
+				<td>Magaly</td>
+				<td>19/03/1991</td>
+			</tr>
+			<tr>
+				<td>Gathy</td>
+				<td>Arnaud</td>
+				<td>02/04/1991</td>
+			</tr>
+		</table>
+
+		<table>
+			<caption>
+				Ticket de caisse
+			</caption>
+			<thead>
+				<tr>
+					<th>Nom Produit</th>
+					<th>Quantité</th>
+					<th>Prix</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Café</td>
+					<td>2</td>
+					<!-- <td>2.50€</td> -->
+					<td rowspan="2">2.50€</td>
+				</tr>
+				<tr>
+					<td>Matcha Latte</td>
+					<td>1</td>
+					<!-- <td>4€</td> -->
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Total</td>
+
+					<td>9€</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

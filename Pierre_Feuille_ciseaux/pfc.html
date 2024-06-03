@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./pfc.css" />
+		<script defer src="./pfc.js"></script>
+	</head>
+
+	<body>
+		<h1>Pierre | Feuille | Ciseaux</h1>
+		<section class="game">
+			<div class="user">
+				<h2>Vous</h2>
+				<img src="./images/hand-fist-solid.svg" alt="Pierre" id="stone" />
+				<img src="./images/hand-regular.svg" alt="Feuille" id="leaf" />
+				<img
+					src="./images/hand-scissors-regular.svg"
+					alt="Ciseaux"
+					id="scissors"
+				/>
+				<h3 id="playerScore"></h3>
+			</div>
+			<div id="result">Cliquez sur une image pour jouer</div>
+			<div class="user">
+				<h2>Ordinateur</h2>
+				<img
+					src="./images/question-solid.svg"
+					alt="Point d'interrogation"
+					id="iaImg"
+				/>
+				<h3 id="iaScore"></h3>
+			</div>
+		</section>
+		<section class="tools">
+			<div class="history">
+				<h3>Statistiques</h3>
+				<div class="totalScore">
+					<div>Vous :</div>
+					<div id="totalPlayer">0</div>
+				</div>
+				<div class="totalScore">
+					<div>Ordinateur :</div>
+					<div id="totalIa">0</div>
+				</div>
+			</div>
+			<div>
+				<img src="./images/repeat-solid.svg" alt="recommencer" id="replay" />
+				<div>Rejouer</div>
+			</div>
+			<div>
+				<img src="./images/eraser-solid.svg" alt="gomme" id="erased" />
+				<div>Effacer</div>
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+body div:first-child {
+  background-color: green;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  display: flex;
+  direction: row;
+  justify-content: flex-end;
+}
+body div:nth-child(2) {
+  background-color: red;
+  border: 1px solid blue;
+  color: blue;
+}
+body div:nth-child(3) {
+  background-color: green;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  width: 75px;
+}
+body div:nth-child(3):hover {
+  transform: translateX(738px);
+}/*# sourceMappingURL=index.css.map */

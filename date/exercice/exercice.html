@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.11/locale/fr.min.js"
+			integrity="sha512-GdNlwQyB8z0UkoyjhFaBRNQ6aoIVAwczI5aNTXOU7OHRa6fT+ePEizpkjkzms9aOKpboUD2p7qQ7vY0rwVufkA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<link rel="stylesheet" href="./exercice.css" />
+		<script defer src="./exercice.js"></script>
+	</head>
+	<body>
+		<table>
+			<caption>
+				<h1>Calendrier du 20/05 au 16/06</h1>
+			</caption>
+			<thead id="thead">
+				<tr>
+					<!-- <th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th>
+					<th></th> -->
+				</tr>
+			</thead>
+
+			<tbody id="tbody">
+				<tr>
+					<td class="week" id="week1"></td>
+					<td class="noLesson">Férié</td>
+					<td colspan="2" class="html">Html/css</td>
+
+					<td class="illustrator">Illustrator</td>
+					<td class="js">JavaScript</td>
+					<td colspan="2" rowspan="4" class="noLesson"></td>
+				</tr>
+				<tr>
+					<td class="week" id="week2"></td>
+					<td colspan="2" class="js">JavaScript</td>
+
+					<td colspan="2" class="html">Html/css</td>
+
+					<td class="github">Github</td>
+				</tr>
+				<tr>
+					<td class="week" id="week3"></td>
+					<td colspan="2" class="js">JavaScript</td>
+
+					<td class="html">Html/css</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="week" id="week4"></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

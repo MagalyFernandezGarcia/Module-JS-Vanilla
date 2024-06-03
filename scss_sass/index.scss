@@ -1,0 +1,40 @@
+@use "./variables" ;
+@use "sass:math";
+
+@mixin theme($prim : green,$sec : whitesmoke){
+    background-color: $prim ;
+    border: 1px solid $sec;
+    color: $sec;
+}
+
+@mixin flex($direction : row, $justify : center, $align : center) { 
+    display: flex;
+    direction: $direction;
+    justify-content: $justify;
+    $align-items: $align;
+}
+
+
+
+
+body{
+    div{
+
+        &:first-child{
+            @include theme();
+            @include flex($justify: flex-end);
+        }
+        &:nth-child(2){
+            @include theme(variables.$primary-color,variables.$secondary-color);
+        }
+        &:nth-child(3){
+            @include theme();
+            width: 75px;
+            
+            &:hover{
+                transform: translateX(math.random(1000)+px);
+            }
+        }
+    }
+    
+}

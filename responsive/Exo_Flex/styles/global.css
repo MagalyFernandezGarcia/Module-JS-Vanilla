@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+header {
+    width: 100%;
+    height: 8%;
+    background-color: burlywood;
+
+    nav {
+        width: 80%;
+        height: 100%;
+        margin: auto;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+
+        div {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+        ul {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 82%;
+}
+
+.title {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        color : burlywood;
+        margin-right: 2rem ;
+    }
+
+    div {
+        padding: 0.5rem 0.5rem ;
+        border: 2px solid burlywood;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+    }
+    svg {
+        
+        width: 30px;
+        height: 30px;
+        fill: burlywood;
+        stroke : burlywood;
+    }
+}
+
+
+
+.container {
+    width: 80%;
+    margin : auto;
+    margin-top: 2rem;
+    height: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap : 5%;
+    align-content: space-between;
+}
+
+.card {
+    background-color: rgb(234, 228, 219);
+    width: 30%;
+    height: 45%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-radius: 2.5rem;
+
+    .card-header {
+        width: 90%;
+        height: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            width: 35%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 2rem;
+                object-position: center;
+
+                &#card-5-img {
+                    object-position: 0 90% !important;
+                }
+            }
+        }
+        h2 {
+            width: 60%;
+            font-size: large;
+        }
+    }
+    .card-content {
+        width: 90%;
+        height: 20%;
+        display: flex;
+        align-items: center;
+    }
+    .card-btn {
+        width: 90%;
+        height: 20%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            width: 45%;
+            height: 75%;
+            border-radius: 0.75rem;
+            border : 1px solid burlywood;
+
+            &.secondary {
+                background-color: transparent;
+                color : burlywood;
+            }
+
+            &.primary {
+                background-color: burlywood;
+
+            }
+        }
+    }
+    
+}
+
+
+
+/* Responsive */
+
+@media (max-width : 576px){
+
+    header{
+
+        position: sticky;
+        top : 0;
+        
+            
+        nav{
+
+            justify-content: space-around;
+            width: 100%;
+            
+        }
+    }
+
+
+
+    .container{
+        
+        overflow-y: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap: 2%;
+    }
+
+
+    .card{
+        width: 100%;
+        height: 80%;
+
+         .card-header{
+        flex-direction: column;
+        
+        height: 70%;
+       
+        
+        div{
+
+            width: 70%;
+            height: 90%;
+        }
+        
+    }
+
+    }
+
+
+   
+
+   
+
+}

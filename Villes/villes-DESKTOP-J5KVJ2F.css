@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+    row-gap: 70px;
+    align-items: center;
+    padding-top: 2rem;
+   background-image: url(/images/board.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+
+    
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: 380px;
+    background-color: snow;
+   
+    transform: rotate(-2deg); /* Standard syntax */
+    transform-origin: bottom left; 
+    position : relative;
+    box-shadow: 3px 3px 5px
+
+    
+}
+
+.pictures{
+    width: 95%;
+        height: 280px;
+        object-fit: cover;
+
+}
+
+
+.pin{
+    position: absolute;
+    height: 50px;
+    top: 0px;
+    
+}

@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #558564;
+}
+
+.top{
+    display: flex;
+    height: 70%;
+    width: 80%;
+    
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play{
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+   
+    justify-content: center;
+}
+
+.playedLetters{
+    width: 40vw;
+    height: 50%;
+}
+
+#word{
+    letter-spacing: 5px;
+}
+
+.bottom{
+    background-color:#49D49D;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+

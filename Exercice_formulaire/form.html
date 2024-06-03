@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=
+    , initial-scale=1.0"
+		/>
+		<title>Document</title>
+		<link rel="stylesheet" href="./form.css" />
+		<script defer src="./form.js"></script>
+	</head>
+	<body>
+		<section class="left">
+			<h1>Ajouter une tâche</h1>
+			<form id="form">
+				<div class="block">
+					<label for="name">Entrez votre nom</label>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						maxlength="200"
+						required
+						placeholder="Votre Nom"
+						autocomplete="off"
+						pattern="[a-zA-Z]+"
+					/>
+				</div>
+				<div class="block">
+					<label for="description">Description de la tâche</label>
+					<textarea
+						name="description"
+						id="description"
+						maxlength="500"
+						spellcheck="true"
+					></textarea>
+				</div>
+				<div class="date">
+					<label for="startDate">Date de début</label>
+					<input
+						type="date"
+						name="startDate"
+						required
+						min="2024-05-17"
+						id="startDate"
+					/>
+					<label for="endDate">Date de fin</label>
+					<input type="date" name="endDate" id="endDate" />
+				</div>
+				<div class="block">
+					<label for="choosen">Personne à qui attribuer la tâche</label>
+					<select name="choosen" id="choosen">
+						<option selected hidden value="">
+							Choisissez une personne dans la liste
+						</option>
+						<option value="lara">Lara</option>
+						<option value="bene">Béné</option>
+						<option value="amandine">Amandine</option>
+						<option value="zuzanna">Zuzanna</option>
+					</select>
+				</div>
+				<div>
+					<input type="checkbox" name="emergency" id="emergency" />
+					<label for="emergency">Tâche urgente</label>
+				</div>
+				<div class="btn">
+					<button type="reset">Effacer</button>
+					<button type="submit" id="submit">Ajouter</button>
+				</div>
+			</form>
+		</section>
+
+		<section class="right">
+			<h1>Liste des tâches</h1>
+			<div class="headRight">
+				<div id="object"></div>
+			</div>
+		</section>
+	</body>
+</html>

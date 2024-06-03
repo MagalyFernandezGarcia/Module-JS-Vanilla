@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="./pendax.css" />
+		<script defer src="./mots.js"></script>
+		<script defer src="./pendu.js"></script>
+	</head>
+	<body>
+		<main>
+			<div id="looseModal">
+				<div class="modal">
+					<div class="modal-content">
+						<div>Dommage, vous avez perdu.</div>
+						<button class="retry">recommencer</button>
+					</div>
+				</div>
+			</div>
+			<div id="winModal">
+				<div class="modal">
+					<div class="modal-content">
+						<div>Félicitation, vous avez gagné!</div>
+						<button class="retry">recommencer</button>
+					</div>
+				</div>
+			</div>
+			<h1 class="title">Le Pendu</h1>
+			<section class="top">
+				<img src="./Images/pendu0.png" alt="potence" id="potence" />
+				<div class="wordsContent">
+					<div id="word"></div>
+					<input type="text" id="input" placeholder="Entre une lettre" />
+				</div>
+			</section>
+			<section class="bottom">
+				<div class="playedSpace">
+					<div>Lettres déjà jouées</div>
+					<div id="played"></div>
+				</div>
+				<div class="stats">
+					<div class="scores">
+						<h3>Scores</h3>
+						<div class="point">
+							<div>Victoires :</div>
+							<div id="victory"></div>
+						</div>
+						<div class="point">
+							<div>Défaites :</div>
+							<div id="loose"></div>
+						</div>
+					</div>
+					<div>
+						<img
+							src="./Images/repeat-solid.svg"
+							alt="recommencer"
+							id="retryBtn"
+						/>
+						<div>Réessayer</div>
+					</div>
+					<div>
+						<img src="./Images/eraser-solid.svg" alt="Gomme" id="erased" />
+						<div>Effacer</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

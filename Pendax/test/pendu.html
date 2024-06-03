@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script defer src="./mots.js"></script>
+		<script defer src="./pendu.js"></script>
+		<link rel="stylesheet" href="./pendu.css" />
+	</head>
+	<body>
+		<main>
+			<section class="top">
+				<div>
+					<img src="./Images/pendu0.png" alt="potence" id="potence" />
+					<div class="pendu">Nombre de vies :</div>
+					<div id="life"></div>
+				</div>
+				<div id="word">mot</div>
+				<input type="text" id="input" />
+			</section>
+			<section class="bottom">
+				<div class="play">
+					<div class="playedLetters">
+						<div>lettres jouées</div>
+						<div id="played"></div>
+					</div>
+				</div>
+				<div>
+					Scores
+					<div>victoires :</div>
+					<div id="victory"></div>
+					<div>défaites :</div>
+					<div id="loose"></div>
+				</div>
+				<button id="retry">recommencer</button>
+			</section>
+		</main>
+	</body>
+</html>

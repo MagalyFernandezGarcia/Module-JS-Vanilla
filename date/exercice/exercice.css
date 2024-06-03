@@ -1,0 +1,64 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    max-width: 100vw;
+    max-height: 100vh;
+    justify-content: space-around;
+}
+
+
+table, th, td{
+    border : 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+td, th {
+    height: 75px;
+    width: 150px;
+    text-align: center;
+    
+}
+
+caption{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.html{
+    background-color: #C36F09;
+}
+
+.js{
+    background-color: #F4E409;
+}
+
+.github{
+    background-color: #EEBA0B;
+}
+
+.illustrator{
+    background-color: #A63C06;
+}
+
+.noLesson{
+    background-color: #C84C09;
+}
+
+th, .week{
+    background-color: #970303;
+}
+
+img{
+    height: 100%;
+}
+/*nth-child()*/
+
+tbody.studentsList tr:nth-child(2n){
+    background-color: #A63C06;
+}

@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 100vw;
+    max-height: 100vh;
+    
+}
+
+table, th, td{
+    border : 1px solid black;
+    border-collapse: collapse;
+    
+}
+
+td, th {
+    height: 75px;
+    width: 150px;
+    text-align: center;
+    
+}
+
+/* .studentsList{
+    margin-top: 5rem;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+} */

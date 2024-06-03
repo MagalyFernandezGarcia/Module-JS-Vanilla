@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.test{
+    background-color: orange;
+    width: 100%;
+    height: 10vh;
+}
+
+
+/* si on travaille avec max-width, aller du plus grand vers le plus petit */
+
+/* @media (max-width : 1024px){
+    .test{
+    background-color: green;
+}
+
+
+@media (max-width : 780px){
+    .test{
+    background-color: blue;
+}
+
+}
+}
+@media (max-width : 680px){
+    .test{
+    background-color: purple;
+}
+
+} */
+
+
+
+/* si on travaille avec min-width, aller du plus petit au plus grand */
+
+
+@media (min-width : 680px){
+    .test{
+    background-color: purple;
+}
+
+}
+@media (min-width : 780px){
+    .test{
+    background-color: blue;
+}
+
+}
+
+@media (min-width : 1024px){
+    .test{
+    background-color: green;
+}
+
+
+}
+
+@media (orientation : landscape){
+    body{
+        background-color: aqua;
+    }
+}
