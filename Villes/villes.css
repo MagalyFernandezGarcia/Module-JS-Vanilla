@@ -4,9 +4,20 @@
     box-sizing: border-box
 }
 
+:root{
+    --bg-img :  url(images/board.jpg);
+     
+}
+
 body{
     max-width: 100vw;
     max-height: 100vh;
+}
+
+header{
+    background-image: var(--bg-img);
+    background-repeat: no-repeat;
+   background-size: cover;
 }
 
 main{
@@ -18,9 +29,10 @@ main{
     row-gap: 70px;
     align-items: center;
     padding-top: 2rem;
-   background-image: url(/images/board.jpg);
+   background-image: var(--bg-img);
    background-repeat: no-repeat;
    background-size: cover;
+   min-height: 100vh;
 
     
 }

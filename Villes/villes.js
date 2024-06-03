@@ -87,8 +87,17 @@ const arrayOfCities = [
 		nbResidents: null,
 	},
 ];
+const filtre = document.getElementById("filtre");
 
-displayCards(arrayOfCities);
+if (!filtre.value || filtre.value === "all") {
+	displayCards(arrayOfCities);
+} else {
+	arrayOfCities.forEach((city) => {
+		if (city.continent === filtre.value) {
+			constructCard(city);
+		}
+	});
+}
 
 function constructCard(cityObject) {
 	const containerDiv = document.createElement("div");
@@ -120,8 +129,8 @@ function constructCard(cityObject) {
 	main.append(containerDiv);
 }
 
-function displayCards(arrayOfObject) {
-	arrayOfCities.forEach((city) => {
+function displayCards(arrayOfcities) {
+	arrayOfcities.forEach((city) => {
 		constructCard(city);
 	});
 }
@@ -130,3 +139,14 @@ function randomRotate() {
 	return Math.floor(Math.random() * 13) - 6;
 }
 
+filtre.addEventListener("change", () => {
+	main.innerHTML = "";
+	if (filtre.value === "all") {
+		displayCards(arrayOfCities);
+	}
+	arrayOfCities.forEach((city) => {
+		if (city.continent === filtre.value) {
+			constructCard(city);
+		}
+	});
+});
