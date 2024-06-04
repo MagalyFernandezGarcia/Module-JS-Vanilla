@@ -92,11 +92,10 @@ const filtre = document.getElementById("filtre");
 if (!filtre.value || filtre.value === "all") {
 	displayCards(arrayOfCities);
 } else {
-	arrayOfCities.forEach((city) => {
-		if (city.continent === filtre.value) {
-			constructCard(city);
-		}
-	});
+	const filteredCities = arrayOfCities.filter(
+		(city) => city.continent === filtre.value
+	);
+	displayCards(filteredCities);
 }
 
 function constructCard(cityObject) {
@@ -143,10 +142,10 @@ filtre.addEventListener("change", () => {
 	main.innerHTML = "";
 	if (filtre.value === "all") {
 		displayCards(arrayOfCities);
+	} else {
+		const filteredCities = arrayOfCities.filter(
+			(city) => city.continent === filtre.value
+		);
+		displayCards(filteredCities);
 	}
-	arrayOfCities.forEach((city) => {
-		if (city.continent === filtre.value) {
-			constructCard(city);
-		}
-	});
 });

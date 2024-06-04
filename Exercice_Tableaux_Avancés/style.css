@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table, th, td{
+    border : 1px solid black;
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+
+td, th {
+    height: 75px;
+    width: 150px;
+    text-align: center;
+    vertical-align: center;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+
+
+
+
+thead th div{
+    display: flex;
+    
+    justify-content: space-around;
+    
+
+    img{
+        width: 20px;
+        height: 20px;
+    }
+    
+}

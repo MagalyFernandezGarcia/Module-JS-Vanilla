@@ -5,27 +5,67 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<script defer src="./index.js"></script>
+		<link rel="stylesheet" href="./style.css" />
 	</head>
 	<body>
 		<main>
+			<input type="text" id="search" />
 			<table>
 				<thead>
 					<tr>
-						<th>Nom</th>
-						<th>Prénom</th>
-						<th>Date de naissance</th>
+						<th>
+							<div>
+								Nom
+								<img
+									src="./images/up-long-solid.svg"
+									alt="flèche haut"
+									class="up"
+									id="upName"
+								/>
+								<img
+									src="./images/down-long-solid.svg"
+									alt="flèche bas"
+									class="down"
+									id="downName"
+								/>
+							</div>
+						</th>
+						<th>
+							<div>
+								Prénom
+								<img
+									src="./images/up-long-solid.svg"
+									alt="flèche haut"
+									class="up"
+									id="upFirstName"
+								/>
+								<img
+									src="./images/down-long-solid.svg"
+									alt="flèche bas"
+									class="down"
+									id="downFirstName"
+								/>
+							</div>
+						</th>
+						<th>
+							<div>
+								Date de naissance
+								<img
+									src="./images/up-long-solid.svg"
+									alt="flèche haut"
+									id="upDate"
+								/>
+								<img
+									src="./images/down-long-solid.svg"
+									alt="flèche bas"
+									id="downDate"
+								/>
+							</div>
+						</th>
 						<th>Téléphone</th>
 					</tr>
-                    <tbody>
-                        <tr>
-                            
-
-                        </tr>
-                        <tr>
-                            
-                        </tr>
-                    </tbody>
 				</thead>
+				<tbody></tbody>
 			</table>
 		</main>
 	</body>
