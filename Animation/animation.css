@@ -1,0 +1,285 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    height: 10%;
+    background-color: blueviolet;
+    position: relative;
+
+    img{
+        height: 80%;
+    }
+
+    div{
+        display: flex;
+        gap: 30px
+    }
+
+
+}
+
+.navBar:hover{
+    animation:changeColor 0.5s linear infinite;
+}
+.navBar:hover #discoBall{
+    animation: discoOn 3s linear 0s 1 forwards;
+}
+
+
+.bouncing{
+    animation: bouncing 0.5s linear infinite;
+}
+
+.spotContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 90%;
+    width: 100%;
+    position: relative;
+
+    img{
+        object-fit: contain;
+        height: 10%;
+        position: absolute;
+        z-index: 1;
+    }
+   
+}
+
+#pigeon1{
+    top: 60%;
+    left: 25%;
+}
+
+#pigeon2{
+    top: 20%;
+    left: 50%;
+    
+}
+
+#pigeon3{
+    top: 60%;
+    left: 40%;
+}
+
+#pigeon4{
+    top: 60%;
+    left: 60%;
+}
+
+#trash{
+    bottom: 2%;
+    opacity: 0;
+    
+}
+
+#rat{
+    bottom: 2%;
+    left: 5%;
+    opacity: 0;
+}
+
+#discoBall{
+    left: 45%;
+    height: 170%;
+    transform: translateY(20%);
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+.spotLeft, .spotRight, .spot{
+    width: 10%;
+    height: 100%;
+    z-index: 0;
+    
+    
+}
+
+.spotLeft{
+    background-color: blue;
+    transform: skew(5deg);
+}
+
+.spotRight{
+    background-color: brown;
+    transform: skew(-5deg);
+}
+
+.changeSpotRightColors{
+    animation: changeSpotRighttColors 1s linear infinite;
+}
+
+.changeSpotLeftColors{
+    animation: changeSpotLefttColors 1s linear infinite;
+}
+
+.envolPidgeon{
+    animation: envolPidgeon 2s linear 0s 1 forwards, flyingPidgeon 2.5s linear 3s infinite;
+
+}
+
+
+
+.backFlipPidgeon{
+    animation: backFlipPidgeon  2s linear infinite;
+    
+}
+
+.moonWalkPidgeon{
+    animation: moonWalkPidgeon 2s linear infinite; ;
+}
+
+.wobblePidgeon{
+    animation: wobblePidgeon 1s linear infinite;
+}
+
+.ratStealing{
+    
+    animation: ratAppearing 10s linear 5s 1 forwards, ratStealing 20s linear 15s infinite;
+}
+
+.ratAppearing{
+    animation: ratAppearing 2s linear 5s 1 forwards;
+}
+
+
+
+
+@keyframes bouncing{
+    0%{transform: translate(0%, 5%);}
+    
+}
+
+@keyframes changeColor{
+    0%{background-color: blueviolet;}
+    50%{background-color: red;}
+    100%{background-color: blueviolet;}
+}
+
+@keyframes changeSpotRighttColors{
+    0%{background-color: blue;}
+    25%{background-color: yellow;}
+    50%{background-color: red;}
+    
+    100%{background-color: blue;}
+}
+
+@keyframes changeSpotLefttColors{
+    0%{background-color: red;}
+    50%{background-color: blue;}
+    75%{background-color: green;}
+    100%{background-color: red;}
+}
+
+@keyframes envolPidgeon{
+    from{transform: translateY(400%);}
+    to{transform: translateY(0);}
+}
+
+@keyframes flyingPidgeon{
+    
+    from{transform: rotate(0turn);}
+    
+    to{transform: rotate(1turn);}
+}
+ 
+
+@keyframes backFlipPidgeon{
+   0%{transform: rotatex(0);}
+   20%{transform: rotatex(0);}
+   50%{transform: rotatex(-180deg);}
+   100%{transform: rotatex(0deg);}
+   
+}
+
+
+@keyframes moonWalkPidgeon{
+    0% {
+        transform: translateX(0%) scaleX(1);
+    }
+    50% {
+        transform: translateX(200%) scaleX(1);
+    }
+    50.01% {
+        transform: translateX(200%) scaleX(-1);
+    }
+    100% {
+        transform: translateX(0%) scaleX(-1);
+    }
+    
+
+}
+
+
+@keyframes wobblePidgeon{
+    0%,
+  100% {
+   
+            transform: translateX(0%);
+    
+            transform-origin: 50% 50%;
+  }
+  15% {
+    
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+   
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+   
+            transform: translateX(-6px) rotate(-1.2deg);
+}
+
+}
+
+@keyframes ratAppearing{
+    0% {
+        
+                transform: scale(0);
+        opacity: 1;
+      }
+      100% {
+       
+                transform: scale(1);
+        opacity: 1;
+      }
+}
+
+@keyframes ratStealing{
+    0% {transform: translateX(0%);}
+    50% {transform: translateX(3200%)};
+    100% {transform: translateX(0%);}
+}
+
+@keyframes discoOn{
+    0%{transform: translateY(0); opacity: 1;}
+    100%{transform: translateY(80%);opacity: 1;}
+
+}
+
+
