@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --wood:url("./images/wood2.jpg");
+}
+
+body{
+    display: flex;
+    
+    justify-content: center;
+    
+    gap: 10%;  
+    height: 100vh;
+    position: relative;
+    background-image: url(./images/garden.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.choice{
+    background-image: var(--wood);
+    padding-top: 3vh;
+    margin-top: 1vh;
+    border-radius: 50% 50% 0% 0%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-shadow: 0px 5px 5px 2px black;
+    
+}
+.playerEnvironement {
+    height: 89vh;
+   
+    background-image: var(--wood);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-radius: 0% 0% 10% 10%;
+    box-shadow: 0px 5px 5px 2px black;
+    
+    
+    
+}
+
+.color{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px 1px black;
+    
+    
+}
+
+#jaune{
+    background-color: #EDF060;
+}
+
+#bleu{
+    background-color: #2081C3;
+}
+
+#rouge, .rouge{    
+    background-color:#BF1A2F;    
+}
+
+#vert{
+    background-color: green;
+}
+
+#blanc{    
+    background-color: #F2F7F2;
+}
+
+#noir{
+    background-color: #2C363F;
+}
+
+.emptyRow{
+    display: flex;
+    justify-content: center;
+}
+
+.emptySpace{
+    background-color: #614344;
+    margin-right: 0.2rem;
+   
+
+
+}
+
+.hint{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   gap: 15%;
+   
+
+}
+.emptyHint{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border-style: none;
+    background-color: #8a5f61;
+    box-shadow: 0px 0px 5px 1px black;
+    
+}
+
+.fullLine{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.gameButton{
+    position: absolute;
+    right: 22%;
+    top: 5%;
+}
+
+/* Boutons */
+
+
+/* CSS */
+.button-7 {
+  background-color:#2f490e;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-7:hover,
+.button-7:focus {
+  background-color: #3f6212;
+}
+
+.button-7:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-7:active {
+  background-color: #7fc426;
+  box-shadow: none;
+}
