@@ -40,7 +40,6 @@ const setUpSpace = () => {
 			emptyHintSpace3,
 			emptyHintSpace4
 		);
-		hintBoard.push(newHintRow);
 
 		newRow.append(emptySpace1, emptySpace2, emptySpace3, emptySpace4);
 		boardGame.push(newRow);
@@ -67,7 +66,7 @@ const isTheColorRight = (
 ) => {
 	let numberOfRightColor = 0;
 
-	let rowPosition = numberOftries + 1;
+	let rowPosition = numberOftries;
 	let childPosition = arrayOfCoulorFound.length;
 	propositionPlayer.forEach((color, index) => {
 		if (arrayFromGame.includes(color) && !(arrayFromGame[index] === color)) {
@@ -75,22 +74,12 @@ const isTheColorRight = (
 
 			hintBoard[rowPosition].children[childPosition].id = "blanc";
 			childPosition++;
-			console.log(
-				"vérification " +
-					" couleur vérifiée " +
-					color +
-					" tableau à vérifier " +
-					arrayFromGame
-			);
+			console.log("row in white" + rowPosition);
 		}
 		if (arrayFromGame.includes(color) && arrayFromGame[index] === color) {
 			arrayFromGame[index] = "";
 		}
 	});
-
-	console.log(
-		"Il y a " + numberOfRightColor + " couleurs correctes mais mal placées"
-	);
 };
 
 // exercice 2
@@ -99,11 +88,12 @@ const comparisonPositionRight = (arrayFromGame, propositionPlayer) => {
 	let colorFound = [];
 	let colorPlayerToBeMoreChecked = [];
 	let computerColorToComparate = [];
-	let rowPosition = numberOftries + 1;
+	let rowPosition = numberOftries;
 	for (let i = 0; i < arrayFromGame.length; i++) {
 		if (arrayFromGame[i] === propositionPlayer[i]) {
 			colorFound.push(propositionPlayer[i]);
 			hintBoard[rowPosition].children[compteur].id = "rouge";
+			console.log("row in red" + rowPosition);
 			compteur++;
 		} else {
 			colorPlayerToBeMoreChecked.push(propositionPlayer[i]);
@@ -120,8 +110,6 @@ const comparisonPositionRight = (arrayFromGame, propositionPlayer) => {
 		colorPlayerToBeMoreChecked,
 		colorFound
 	);
-
-	return console.log("Il y a " + compteur + " couleur(s) à la bonne position");
 };
 
 // Jeu
@@ -154,7 +142,7 @@ submit.addEventListener("click", () => {
 		playerGuess = [];
 		numberOftries++;
 	}
-	console.log(numberOftries);
+	console.log("nb of tries " + numberOftries);
 	if (numberOftries === 12) {
 		alert("Tu as perdu");
 		resetGame();
