@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script defer src="./api.js"></script>
+	</head>
+	<body>
+		<label for="country">Pays</label>
+		<select name="country" id="country">
+			<option value="">Choisis un pays</option>
+			<option value="be">Belgique</option>
+			<option value="us">Etats-Unis</option>
+			<option value="fr">France</option>
+			<option value="de">Allemagne</option>
+			<option value="es">Espagne</option>
+		</select>
+		<label for="postCode">Code postal</label>
+		<input type="text" id="postCode" name="postCode" />
+		<button id="validation">valider</button>
+		<div id="result"></div>
+	</body>
+</html>
