@@ -1,4 +1,6 @@
 const main = document.querySelector("main");
+const modal = document.querySelector(".modal-content");
+const mainModal = document.getElementById("myModal");
 
 const arrayOfCities = [
 	{
@@ -23,7 +25,7 @@ const arrayOfCities = [
 		nbResidents: " 3 millions",
 	},
 	{
-		name: "Lisbone",
+		name: "Lisbonne",
 		image: "./images/lisboa.jpg",
 		country: "Portugal",
 		continent: "Europe",
@@ -148,4 +150,68 @@ filtre.addEventListener("change", () => {
 		);
 		displayCards(filteredCities);
 	}
+});
+
+const cardsOfCities = document.querySelectorAll(".cards");
+
+cardsOfCities.forEach((card) => {
+	card.addEventListener("click", async () => {
+		mainModal.style.display = "block";
+		let city = card.children[2].innerText;
+		try {
+			const res = await axios.get(
+				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APITOKEN}&units=metric&lang=fr`
+			);
+			console.log(res.data);
+			console.log(res.data.main.temp_max);
+			const minTemp = document.createElement("div");
+			const maxTemp = document.createElement("div");
+			const feelTemp = document.createElement("div");
+			const actualTemp = document.createElement("div");
+			const weather = document.createElement("div");
+			const iconDiv = document.createElement("img");
+			const humidity = document.createElement("div");
+			const pressure = document.createElement("div");
+			const windSpeed = document.createElement("div");
+			const sunset = document.createElement("div");
+			const sunrise = document.createElement("div");
+			let icon = res.data.weather[0].icon;
+
+			minTemp.innerText = `Température minimale : ${res.data.main.temp_min} °C`;
+			maxTemp.innerText = `Température maximale : ${res.data.main.temp_max} °C`;
+			actualTemp.innerText = `Température actuelle : ${res.data.main.temp} °C`;
+			feelTemp.innerText = `Ressenti : ${res.data.main.feels_like} °C`;
+			weather.innerText = res.data.weather[0].description;
+			iconDiv.setAttribute(
+				"src",
+				`https://openweathermap.org/img/wn/${icon}.png`
+			);
+			humidity.innerText = `Taux d'humidité : ${res.data.main.humidity} % `;
+			pressure.innerText = `Pression atmosphérique : ${res.data.main.pressure} hPa`;
+			windSpeed.innerText = `Vitesse du vent : ${res.data.wind.speed} m/s`;
+			sunrise.innerText = `Le soleil se lève à : ${new Date(
+				res.data.sys.sunrise * 1000
+			).toLocaleTimeString()} `;
+			sunset.innerText = `Le soleil se couche à : ${new Date(
+				res.data.sys.sunset * 1000
+			).toLocaleTimeString()}`;
+
+			modal.append(
+				minTemp,
+				maxTemp,
+				actualTemp,
+				feelTemp,
+				weather,
+				iconDiv,
+				humidity,
+				pressure,
+				windSpeed,
+				sunrise,
+				sunset
+			);
+		} catch (error) {
+			console.log(error);
+			console.log("oups");
+		}
+	});
 });

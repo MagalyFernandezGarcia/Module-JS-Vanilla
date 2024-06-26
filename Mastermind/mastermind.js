@@ -74,7 +74,6 @@ const isTheColorRight = (
 
 			hintBoard[rowPosition].children[childPosition].id = "blanc";
 			childPosition++;
-			console.log("row in white" + rowPosition);
 		}
 		if (arrayFromGame.includes(color) && arrayFromGame[index] === color) {
 			arrayFromGame[index] = "";
@@ -93,7 +92,7 @@ const comparisonPositionRight = (arrayFromGame, propositionPlayer) => {
 		if (arrayFromGame[i] === propositionPlayer[i]) {
 			colorFound.push(propositionPlayer[i]);
 			hintBoard[rowPosition].children[compteur].id = "rouge";
-			console.log("row in red" + rowPosition);
+
 			compteur++;
 		} else {
 			colorPlayerToBeMoreChecked.push(propositionPlayer[i]);
@@ -142,7 +141,7 @@ submit.addEventListener("click", () => {
 		playerGuess = [];
 		numberOftries++;
 	}
-	console.log("nb of tries " + numberOftries);
+
 	if (numberOftries === 12) {
 		alert("Tu as perdu");
 		resetGame();
