@@ -157,13 +157,15 @@ const cardsOfCities = document.querySelectorAll(".cards");
 cardsOfCities.forEach((card) => {
 	card.addEventListener("click", async () => {
 		mainModal.style.display = "block";
+		modal.innerHTML = "";
+		modal.style.display = "block";
 		let city = card.children[2].innerText;
 		try {
 			const res = await axios.get(
 				`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APITOKEN}&units=metric&lang=fr`
 			);
-			console.log(res.data);
-			console.log(res.data.main.temp_max);
+
+			const closeButton = document.createElement("button");
 			const minTemp = document.createElement("div");
 			const maxTemp = document.createElement("div");
 			const feelTemp = document.createElement("div");
@@ -176,7 +178,9 @@ cardsOfCities.forEach((card) => {
 			const sunset = document.createElement("div");
 			const sunrise = document.createElement("div");
 			let icon = res.data.weather[0].icon;
-
+			closeButton.id = "close";
+			closeButton.className = "close";
+			closeButton.innerText = "X";
 			minTemp.innerText = `Température minimale : ${res.data.main.temp_min} °C`;
 			maxTemp.innerText = `Température maximale : ${res.data.main.temp_max} °C`;
 			actualTemp.innerText = `Température actuelle : ${res.data.main.temp} °C`;
@@ -207,11 +211,17 @@ cardsOfCities.forEach((card) => {
 				pressure,
 				windSpeed,
 				sunrise,
-				sunset
+				sunset,
+				closeButton
 			);
+			const closeModal = document.getElementById("close");
+
+			closeModal.addEventListener("click", () => {
+				mainModal.style.display = "none";
+				modal.style.display = "none";
+			});
 		} catch (error) {
 			console.log(error);
-			console.log("oups");
 		}
 	});
 });
