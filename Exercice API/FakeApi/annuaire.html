@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script defer src="./annuaire.js"></script>
+		<link rel="stylesheet" href="./annuaire.css" />
+	</head>
+	<body>
+		<caption>
+			Liste de contact
+		</caption>
+		<table>
+			<thead>
+				<tr>
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Mail</th>
+					<th>Tel</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+		<form name="addContact">
+			<input name="nom" type="text" placeholder="nom" required />
+			<input name="prenom" type="text" placeholder="prénom" required />
+			<input name="email" type="email" placeholder="email" required />
+			<input name="tel" type="number" placeholder="téléphone" />
+			<button type="submit">Ajouter</button>
+		</form>
+	</body>
+</html>

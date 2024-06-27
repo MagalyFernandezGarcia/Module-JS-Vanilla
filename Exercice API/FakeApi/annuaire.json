@@ -1,0 +1,28 @@
+{
+  "contacts": [
+    {
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "email": "T_T@svg.com",
+      "tel": "0606060606",
+      "id": "1",
+      "favori": true
+    },
+    {
+      "nom": "Doe",
+      "prenom": "test",
+      "email": "UwU@example.com",
+      "tel": "0707070707",
+      "id": "2",
+      "favori": false
+    },
+    {
+      "id": "b5c6",
+      "nom": "Fernandez Garcia",
+      "prenom": "Magaly",
+      "email": "fernandezgarciamagaly@gmail.com",
+      "tel": "0475281936",
+      "favori": false
+    }
+  ]
+}
