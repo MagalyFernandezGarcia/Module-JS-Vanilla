@@ -103,22 +103,22 @@ const changeForm = (contact) => {
 	const inputName = document.createElement("input");
 	inputName.name = "nom";
 	inputName.type = "text";
-	inputName.placeholder = contact.nom;
+	inputName.value = contact.nom;
 	const tdChangeFirstName = document.createElement("td");
 	const inputFirstName = document.createElement("input");
 	inputFirstName.name = "prenom";
 	inputFirstName.type = "text";
-	inputFirstName.placeholder = contact.prenom;
+	inputFirstName.value = contact.prenom;
 	const tdChangeMail = document.createElement("td");
 	const inputMail = document.createElement("input");
 	inputMail.name = "email";
 	inputMail.type = "email";
-	inputMail.placeholder = contact.email;
+	inputMail.value = contact.email;
 	tdChangeTel = document.createElement("td");
 	const inputPhone = document.createElement("input");
 	inputPhone.name = "tel";
 	inputPhone.type = "number";
-	inputPhone.placeholder = contact.tel;
+	inputPhone.value = contact.tel;
 	const tdButton = document.createElement("td");
 	const changeButton = document.createElement("button");
 	changeButton.textContent = "Modifier";
@@ -137,14 +137,12 @@ const changeForm = (contact) => {
 	tbody.append(changeRow);
 
 	changeButton.addEventListener("click", () => {
-		const newName = inputName.value ? inputName.value : inputName.placeholder;
-		const newFirstName = inputFirstName.value
-			? inputFirstName.value
-			: inputFirstName.placeholder;
-		const newMail = inputMail.value ? inputMail.value : inputMail.placeholder;
-		const newPhone = inputPhone.value
-			? inputPhone.value
-			: inputPhone.placeholder;
+		const newName = inputName.value;
+		const newFirstName = inputFirstName.value;
+
+		const newMail = inputMail.value;
+		const newPhone = inputPhone.value;
+
 		console.log(contact.id);
 		const modifiedContact = {
 			nom: newName,
