@@ -157,7 +157,7 @@ const changeForm = (contact) => {
 
 const changeData = async (id, newContactInfo) => {
 	try {
-		await axios.post(apiUrl + "contacts/" + id, newContactInfo);
+		await axios.put(apiUrl + "contacts/" + id, newContactInfo);
 	} catch (error) {
 		console.error(error);
 	}
@@ -165,7 +165,7 @@ const changeData = async (id, newContactInfo) => {
 
 const changeFavori = async (id, newvalue) => {
 	try {
-		await axios.post(apiUrl + "contacts/" + id, newvalue);
+		await axios.patch(apiUrl + "contacts/" + id, newvalue);
 	} catch (error) {
 		console.error(error);
 	}
