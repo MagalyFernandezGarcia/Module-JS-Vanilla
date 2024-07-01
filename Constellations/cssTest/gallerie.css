@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "comfortaa";
+    src: url(../Font/Comfortaa-Regular.ttf);
+}
+:root{
+    --main-text-color: white;
+    --main-bg-color : #1e1b4b;
+    --main-bg-img : url(../images/stars.jpg);
+    --text-font : "comfortaa";
+
+}
+
+
+a{
+    text-decoration: none;
+    color: var(--main-text-color)
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--text-font);
+    
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    height: 7%;
+    padding-left: 2%;
+    padding-right: 2%;
+    
+    img{
+        height: 90%;
+        
+    }
+    div{
+        display: flex;
+        gap: 1rem;
+        height: 100%;
+        align-items: center;
+    }
+}
+
+main{
+    height: 86%;
+    background-image: var(--main-bg-img);
+    background-size: cover;
+    
+    
+    position: relative;
+    color: var(--main-text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+        top: 3%;
+        position: absolute;
+    }  
+    
+    h3{
+        padding-bottom: 1%;
+    }
+}
+
+.hubble{
+    height: 5%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.chevronLeft{
+    width: 3%;
+    z-index: 1;
+    position: absolute;
+    left: 28%;
+    top: 48%;
+    opacity: 50%;
+}
+
+.chevronRight{
+    width: 3%;
+    z-index: 1;
+    position: absolute;
+    right: 28%;
+    top: 48%;
+    opacity: 50%;
+
+}
+
+.chevronLeft:hover, .chevronRight:hover{
+    opacity: 90%;
+    cursor: pointer;
+}
+
+
+
+#imgConstellation{
+    
+    height: 28rem;
+    width: 55rem;
+    object-fit: cover;
+    position: relative;
+    
+}
+
+
+
+footer{
+    background-color: var(--main-bg-color);
+    height: 7%;
+}
+
+
+/* animation */
+
+@keyframes traverse {
+    0% {
+        transform: translateX(0%) translateY(0%);
+    }
+    12% {
+        transform: translateX(1000%) translateY(2000%);
+    }
+    25% {
+        transform: translateX(2000%) translateY(100%);
+    }
+    37% {
+        transform: translateX(3300%) translateY(2000%);
+    }
+    50% {
+        transform: translateX(2000%) translateY(100%);
+    }
+    62% {
+        transform: translateX(1000%) translateY(2000%);
+    }
+
+    100% {
+        transform: translateX(0%);
+        transform: translateY(0%);
+    }
+}
+.traverse {
+    animation: traverse 300s linear 0s infinite;
+}
