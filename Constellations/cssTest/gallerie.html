@@ -5,11 +5,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./gallerie.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<script defer src="../apiToken.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script defer src="../Space/space.js"></script>
 	</head>
 	<body>
-		<header>
+		<header class="desktop">
 			<div>
 				<img src="../images/logo.svg" alt="logo" />
 				<h1>Les constellations</h1>
@@ -19,11 +24,32 @@
 				><a href="">Tips</a>
 			</div>
 		</header>
+
+		<header class="phone">
+			<div>
+				<img src="../images/logo.svg" alt="logo" />
+				<h1>Les constellations</h1>
+			</div>
+			<div class="topnav">
+				<a href="./gallerie.html" class="active"></a>
+				<!-- Navigation links (hidden by default) -->
+				<div id="myLinks">
+					<a href="#news">News</a>
+					<a href="#contact">Contact</a>
+					<a href="#about">About</a>
+				</div>
+				<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+				<a href="javascript:void(0);" class="icon" id="burgerMenu">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+		</header>
+
 		<main>
 			<h2>
 				Clique sur une image pour obtenir des informations sur la constellation
 			</h2>
-			<img src="../images/hubble.png" alt="hubble" class="hubble traverse" />
+			<img src="../images/hubble.png" alt="hubble" class="hubble" id="hubble" />
 			<h3 id="constellationName">Aries</h3>
 
 			<div>
@@ -32,6 +58,7 @@
 						src="../images/chevron-left-solid.svg"
 						alt="flèche droite"
 						id="previous"
+						class="previous"
 					/>
 				</div>
 				<div class="chevronRight">
@@ -39,6 +66,7 @@
 						src="../images/chevron-right-solid.svg"
 						alt="flèche gauche"
 						id="next"
+						class="next"
 					/>
 				</div>
 
@@ -46,9 +74,15 @@
 					src="../images/aries-constellation-01.jpg"
 					alt=""
 					id="imgConstellation"
+					class="imgConstellation"
 				/>
 			</div>
+			<button class="phone moreInfo">Plus d'info</button>
+			<div id="modalHubble" class="modalHubble">
+				<div class="modalHubbleContent"></div>
+			</div>
 		</main>
+
 		<footer></footer>
 	</body>
 </html>
