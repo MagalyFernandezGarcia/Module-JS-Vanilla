@@ -68,7 +68,7 @@
 		</header>
 
 		<main>
-			<h2>
+			<h2 class="instructions">
 				Clique sur une image pour obtenir des informations sur la constellation
 			</h2>
 			<img src="../images/hubble.png" alt="hubble" class="hubble" id="hubble" />
@@ -100,8 +100,14 @@
 				/>
 			</div>
 			<button class="phone moreInfo">Plus d'info</button>
-			<div id="modalHubble" class="modalHubble">
+			<div id="modalHubble" class="modal">
 				<div class="modalHubbleContent"></div>
+			</div>
+			<div id="modalConstellation" class="modal">
+				<div class="accordion-body">
+					<button class="close">X</button>
+					<div class="accordion"></div>
+				</div>
 			</div>
 		</main>
 

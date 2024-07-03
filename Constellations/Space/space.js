@@ -5,7 +5,9 @@ const jsonAPi = "http://localhost:3000/";
 const divConstellationName = document.getElementById("constellationName");
 const hubble = document.getElementById("hubble");
 const modalHubble = document.getElementById("modalHubble");
-const burgerMenu = document.getElementById("burgerMenu");
+const burgerMenu = document.querySelector(".burgerMenu");
+const burgerLinks = document.querySelector(".offScreenMenu");
+const modalConstellation = document.getElementById("modalConstellation");
 
 const getConstellations = async () => {
 	try {
@@ -52,7 +54,7 @@ const getNasaImage = async () => {
 };
 
 hubble.addEventListener("pointerup", async () => {
-	const modalHubbleContent = document.querySelector(".modalHubbleContent");
+	const modalHubbleContent = document.getElementById("modalHubbleContent");
 	modalHubbleContent.innerHTML = "";
 	const imageOfSpace = await getNasaImage();
 	modalHubble.style.display = "block";
@@ -61,8 +63,153 @@ hubble.addEventListener("pointerup", async () => {
 	modalHubbleContent.append(imageToDisplay);
 });
 
-window.addEventListener("pointerup", () => {
-	modalHubble.style.display = "none";
+burgerMenu.addEventListener("pointerup", () => {
+	burgerMenu.classList.toggle("active");
+	burgerLinks.classList.toggle("active");
 });
 
-burgerMenu.addEventListener("pointerup", () => {});
+const createAccordion = () => {
+	const accordion = document.getElementsByClassName("container");
+
+	for (i = 0; i < accordion.length; i++) {
+		accordion[i].addEventListener("click", function () {
+			this.classList.toggle("active");
+		});
+	}
+};
+
+IMG_CONSTELLATION.addEventListener("click", async () => {
+	modalConstellation.style.display = "block";
+	const constellationInfo = await getConstellations();
+	const actualConst = constellationInfo[currentIndex];
+
+	const accordionContent = document.querySelector(".accordion");
+	accordionContent.innerHTML = "";
+
+	const accordionTitle = document.createElement("h1");
+	accordionTitle.innerText = actualConst.name;
+
+	const descriptionTitle = document.createElement("div");
+	descriptionTitle.innerText = "Small description";
+	descriptionTitle.className = "label";
+	const imageOfStars = document.createElement("img");
+	imageOfStars.src = actualConst.imageConstellation;
+	const divText = document.createElement("div");
+	divText.innerText = actualConst.quickDescription;
+	const divDescriptionAll = document.createElement("div");
+	divDescriptionAll.className = "content";
+	divDescriptionAll.append(imageOfStars, divText);
+	const divDescriptionContainer = document.createElement("div");
+	divDescriptionContainer.className = "container";
+	divDescriptionContainer.append(descriptionTitle, divDescriptionAll);
+	const hrDescription = document.createElement("hr");
+
+	const schemaTitle = document.createElement("div");
+	schemaTitle.innerText = "The stars that compose it";
+	schemaTitle.className = "label";
+	const schemaOfStars = document.createElement("img");
+	schemaOfStars.src = actualConst.imageStars;
+	const divStarText = document.createElement("div");
+	divStarText.innerText = actualConst.mostBrillantStars;
+	const divSchemaAll = document.createElement("div");
+	divSchemaAll.className = "content";
+	divSchemaAll.append(schemaOfStars, divStarText);
+	const divSchemaContainer = document.createElement("div");
+	divSchemaContainer.className = "container";
+	divSchemaContainer.append(schemaTitle, divSchemaAll);
+	const hrSchema = document.createElement("hr");
+
+	const mythTitle = document.createElement("div");
+	mythTitle.innerText = `${actualConst.name} in mythologie`;
+	mythTitle.className = "label";
+	const imageOfMyth = document.createElement("img");
+	imageOfMyth.src = actualConst.imageMyth;
+	const divTextMyth = document.createElement("div");
+	divTextMyth.innerText = actualConst.mythology;
+	const divMythAll = document.createElement("div");
+	divMythAll.className = "content";
+	divMythAll.append(imageOfMyth, divTextMyth);
+	const divMythContainer = document.createElement("div");
+	divMythContainer.className = "container";
+	divMythContainer.append(mythTitle, divMythAll);
+	const hrMyth = document.createElement("hr");
+
+	accordionContent.append(
+		accordionTitle,
+		divDescriptionContainer,
+		hrDescription,
+		divSchemaContainer,
+		hrSchema,
+		divMythContainer,
+		hrMyth
+	);
+	createAccordion();
+
+	// const modalConstellationContent = document.querySelector(
+	// 	".modalConstellationContent"
+	// );
+	// modalConstellationContent.innerHTML = "";
+	// createAccordion();
+
+	// const modalConstellationContent = document.querySelector(
+	// 	".modalConstellationContent"
+	// );
+	// modalConstellationContent.innerHTML = "";
+	// const constellationInfo = await getConstellations();
+	// const actualConst = constellationInfo[currentIndex];
+	// const title = document.createElement("h2");
+	// title.innerText = constellationInfo[currentIndex].name;
+	// const allInfo = document.createElement("div");
+	// allInfo.className = "allInfo";
+
+	// const descriptionTitle = document.createElement("h3");
+	// descriptionTitle.innerText = "Small description";
+	// const imageOfStars = document.createElement("img");
+	// imageOfStars.src = actualConst.imageConstellation;
+	// const divText = document.createElement("div");
+	// divText.innerText = actualConst.quickDescription;
+	// const divDescription = document.createElement("div");
+	// divDescription.className = "infoContainer";
+	// divDescription.append(imageOfStars, divText);
+	// const divDescriptionAll = document.createElement("div");
+	// divDescriptionAll.append(descriptionTitle, divDescription);
+	// divDescriptionAll.className = "alignInfoTitle";
+
+	// const schemaTitle = document.createElement("h3");
+	// schemaTitle.innerText = "The stars that compose it";
+	// const divStarText = document.createElement("div");
+	// divStarText.innerText = actualConst.mostBrillantStars;
+	// const schemaOfStars = document.createElement("img");
+	// schemaOfStars.src = actualConst.imageStars;
+	// const divSchema = document.createElement("div");
+	// divSchema.className = "infoContainer";
+	// divSchema.append(divStarText, schemaOfStars);
+	// const divSchemaAll = document.createElement("div");
+	// divSchemaAll.className = "alignInfoTitle";
+	// divSchemaAll.append(schemaTitle, divSchema);
+
+	// const mythTitle = document.createElement("h3");
+	// mythTitle.innerText = `${actualConst.name} in mythologie`;
+	// const imageOfMyth = document.createElement("img");
+	// imageOfMyth.src = actualConst.imageMyth;
+	// const divTextMyth = document.createElement("div");
+	// divTextMyth.innerText = actualConst.mythology;
+	// const divMyth = document.createElement("div");
+	// divMyth.className = "infoContainer";
+	// divMyth.append(imageOfMyth, divTextMyth);
+	// const divMythAll = document.createElement("div");
+	// divMythAll.append(mythTitle, divMyth);
+	// divMythAll.className = "alignInfoTitle";
+
+	// allInfo.append(divDescriptionAll, divSchemaAll, divMythAll);
+	// modalConstellationContent.append(title, allInfo);
+
+	// modalConstellation.append(modalConstellationContent);
+});
+
+const closeButton = document.querySelector(".close");
+
+closeButton.addEventListener("click", () => {
+	modalHubble.style.display = "none";
+	modalConstellation.style.display = "none";
+});
