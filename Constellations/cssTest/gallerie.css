@@ -19,7 +19,8 @@
 
 a{
     text-decoration: none;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
+    font-family: var(--text-font);
 }
 
 body{
@@ -287,7 +288,7 @@ footer{
     }
 
     .chevronLeft{
-        top: 77.5%;
+        top: 78%;
         left: 35%;
         opacity: 90%;
         
@@ -295,7 +296,7 @@ footer{
     }
 
     .chevronRight{
-        top: 77.5%;
+        top: 78%;
         right: 35%;
         opacity: 90%;
     }
@@ -310,43 +311,90 @@ footer{
         
     }
 
-    .topnav {
-        overflow: hidden;
+    .offScreenMenu{
+        background-color: var(--main-bg-color);
+        height: 50%;
+        width: 55%;
+        position: fixed;
+        top: 7%;
+        z-index: 1;
+        right: -450px;
         
+        transition: .3s ease;
+        
+        
+    }
+    
+    .links{
+        padding-top: 8%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        div{
+            height: 10%;
+
+        }
+        
+    }
+
+    .starMenu{
+        width: 10%;
+        height: auto;
+        margin-right: -8%;
+        padding-bottom: 10%;
+        
+    }
+
+    .offScreenMenu.active{
+        right: 0;
+    }
+
+    nav{
+        padding: 1rem;
+        display: flex;
+        background-color: var(--main-bg-color);
+    }
+
+    .burgerMenu{
+        height: 50px;
+        width: 50px;
+        margin-left: auto;
         position: relative;
-      }
-      
-      /* Hide the links inside the navigation menu (except for logo/home) */
-      .topnav #myLinks {
+        span{
+            height: 5px;
+            width: 70%;
+            background-color: white;
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease;
+        }
+        span:nth-child(1){
+            top: 25%;
+        }
+
+        span:nth-child(3){
+            top: 75%;
+        }
+
+        
+    }
+
+    .burgerMenu.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .burgerMenu.active span:nth-child(2){
         display: none;
-      }
-      
-      /* Style navigation menu links */
-      .topnav a {
-        color: white;
-        padding: 14px 10px;
-        text-decoration: none;
-        font-size: 2rem;
-        display: block;
-      }
-      
-      /* Style the hamburger menu */
-      .topnav a.icon {
-        background: var(--main-bg-color);
-        display: block;
-      }
-      
-      /* Add a grey background color on mouse-over */
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      /* Style the active link (or home/logo) */
-      .active {
-        background-color:var(--main-bg-color);   
-        color: white;
-      }
+    }
+
+    .burgerMenu.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
 
     .hubble{
         animation: traversePhone 300s linear 0s infinite;
