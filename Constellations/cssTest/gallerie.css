@@ -331,8 +331,8 @@ footer{
     overflow: hidden;
     transition: 0.5s;
     img{
-        width: 50%;
-        height: 70%;
+        width: 60%;
+        height: 45%;
         object-fit: cover;
     }
    
@@ -566,7 +566,7 @@ footer{
       .accordion .content {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         position: relative;
         gap: 2%;
@@ -578,9 +578,10 @@ footer{
         transition: 0.5s;
         img{
             width: 100%;
-            height: 70%;
+            height: 40%;
             object-fit: cover;
         }
+       
 
       
        
