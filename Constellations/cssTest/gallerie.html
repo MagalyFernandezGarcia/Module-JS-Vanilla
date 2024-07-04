@@ -5,29 +5,32 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./gallerie.css" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
+		<link rel="stylesheet" href="./style.css" />
+
 		<script defer src="../apiToken.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 		<script defer src="../Space/space.js"></script>
+		<script defer src="./BurgerMenu.js"></script>
 	</head>
 	<body>
 		<header class="desktop">
 			<div>
-				<img src="../images/logo.svg" alt="logo" />
+				<a href="./gallerie.html" class="home">
+					<img src="../images/logo.svg" alt="logo" class="logo" />
+				</a>
 				<h1>Les constellations</h1>
 			</div>
 			<div>
-				<a href="">Présentation du site</a><a href="">Contact</a
-				><a href="">Tips</a>
+				<a href="./presentation/presentation.html">Présentation du site</a>
+				<a href="">Contact</a><a href="">Tips</a>
 			</div>
 		</header>
 
 		<header class="phone">
 			<div>
-				<img src="../images/logo.svg" alt="logo" />
+				<a href="../gallerie.html">
+					<img src="../../images/logo.svg" alt="logo" class="logo" />
+				</a>
 				<h1>Les constellations</h1>
 			</div>
 			<div class="offScreenMenu">
@@ -38,7 +41,7 @@
 							alt="petite étoile"
 							class="starMenu"
 						/>
-						<a href="">Présentation du site</a>
+						<a href="./presentation/presentation.html">Présentation du site</a>
 					</div>
 					<div>
 						<img

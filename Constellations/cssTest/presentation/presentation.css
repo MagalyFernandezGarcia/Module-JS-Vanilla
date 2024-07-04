@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../images/nightSky.webp");
+    position: relative;
+    
+    img{
+       
+        width:100%;
+        height: 100%;
+        object-fit: contain;
+        
+       
+        
+    }
+
+    div{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16%;
+        height: 25%;
+        width: 20%;
+        border: solid 1px;
+        padding: 1%;
+        border-radius: 18px;
+        background-color: rgba(30, 27, 75, 0.5);
+    }
+}
+
+#purpose{
+    top: 2%;
+    left: 34%;
+    
+   
+
+}
+
+#public{
+    top: 2%;
+    left: 63%;
+}
+
+#why{
+    top: 45%;
+    left: 17%;
+}
+
+#upgrade{
+    top: 64%;
+    left: 48.2%;
+    height: 35%;
+    background-color: rgba(30, 27, 75, 0.8)
+    
+}
+
+
+@media (max-width: 600px) {
+
+    header{
+        height: 8%;
+    }
+
+    main{
+        flex-direction: column;
+        background-image: url(../../images/stars.jpg);
+        gap: 1.5%;
+        div{
+            position:static;
+            width: 90%;
+            height: max-content;
+            gap: 0;
+            h3{
+                padding-top: 3%;
+                padding-bottom: 3%;
+            }
+        }
+    }
+
+}

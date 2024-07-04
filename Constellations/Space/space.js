@@ -5,8 +5,6 @@ const jsonAPi = "http://localhost:3000/";
 const divConstellationName = document.getElementById("constellationName");
 const hubble = document.getElementById("hubble");
 const modalHubble = document.getElementById("modalHubble");
-const burgerMenu = document.querySelector(".burgerMenu");
-const burgerLinks = document.querySelector(".offScreenMenu");
 const modalConstellation = document.getElementById("modalConstellation");
 
 const getConstellations = async () => {
@@ -63,12 +61,7 @@ hubble.addEventListener("pointerup", async () => {
 	modalHubbleContent.append(imageToDisplay);
 });
 
-burgerMenu.addEventListener("pointerup", () => {
-	burgerMenu.classList.toggle("active");
-	burgerLinks.classList.toggle("active");
-});
-
-const createAccordion = () => {
+const activateAccordion = () => {
 	const accordion = document.getElementsByClassName("container");
 
 	for (i = 0; i < accordion.length; i++) {
@@ -143,7 +136,7 @@ IMG_CONSTELLATION.addEventListener("click", async () => {
 		divMythContainer,
 		hrMyth
 	);
-	createAccordion();
+	activateAccordion();
 
 	// const modalConstellationContent = document.querySelector(
 	// 	".modalConstellationContent"
