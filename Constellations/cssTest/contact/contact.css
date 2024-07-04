@@ -1,0 +1,146 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   h2{
+    position: absolute;
+    top: 2%;
+   }
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    width: 50%;
+    height: 90%;
+    input{
+        width: 50%;
+        height: 5%;
+        border-radius: 18px;
+        background-color: rgba(30, 27, 75, 0.8);
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        padding-left: 2%;
+        
+    }
+    textarea{
+        width: 50%;
+        height: 40%;
+        border-radius: 18px;
+        background-color: rgba(30, 27, 75, 0.8);
+        color: white;
+        border: none;
+        font-size: 1.5rem;
+        padding-left: 2%;
+        
+    }
+}
+
+
+
+.buttonArea{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    height: 8%;
+    
+    button{
+        
+        
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+
+.modalContactContent {
+    background-color: var(--main-bg-color);
+    border: 1px solid #888;
+    width: 50%; 
+    height: 50%;
+    margin-left: 25%;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    color: var(--main-text-color);
+    font-family: var(--text-font);
+    font-size: 1.25rem;
+    position: relative;
+  }
+
+  .close{
+    position: absolute;
+    bottom: 3%;
+    border: solid;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+
+  }
+
+
+
+  .valueContent{
+    display: flex;
+    
+    gap: 5%;
+  }
+
+  .error{
+    color: red;
+    
+  }
+
+  .errorInput{
+   
+    border: solid 1px red;
+  }
+
+
+
+@media (max-width: 600px) {
+
+    .home{
+        width: 20%;
+        
+    }
+
+    main{
+        h2{
+            font-size: 1.25rem;
+        }
+    }
+
+    form{
+        width: 100%;
+
+        input{
+            width: 80%;
+        }
+        textarea{
+            width: 80%;
+        }
+    }
+
+    .buttonArea{
+        flex-direction: column;
+        width: 80%;
+        gap: 30%;
+        button{
+            padding-top: 8%;
+            padding-bottom: 8%;
+        }
+    }
+    
+}

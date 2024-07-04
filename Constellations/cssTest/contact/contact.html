@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="stylesheet" href="./contact.css" />
+		<script defer src="../BurgerMenu.js"></script>
+		<script defer src="./contact.js"></script>
+	</head>
+	<body>
+		<header class="desktop">
+			<div>
+				<a href="../gallerie.html" class="home">
+					<img src="../../images/logo.svg" alt="logo" class="logo" />
+				</a>
+				<h1>Contact</h1>
+			</div>
+			<div>
+				<a href="../presentation/presentation.html">Présentation du site</a>
+				<a href="./contact.html">Contact</a><a href="">Tips</a>
+			</div>
+		</header>
+		<header class="phone">
+			<div>
+				<a href="../gallerie.html" class="home">
+					<img src="../../images/logo.svg" alt="logo" class="logo" />
+				</a>
+				<h1>Contact</h1>
+			</div>
+			<div class="offScreenMenu">
+				<div class="links">
+					<div>
+						<img
+							src="../../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="../presentation/presentation.html">Présentation du site</a>
+					</div>
+					<div>
+						<img
+							src="../../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="../contact/contact.html">Contact</a>
+					</div>
+					<div>
+						<img
+							src="../../images/whiteStar.png"
+							alt="petite étoile"
+							class="starMenu"
+						/>
+						<a href="">Tips</a>
+					</div>
+				</div>
+			</div>
+			<nav>
+				<div class="burgerMenu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<h2>Nous contacter</h2>
+			<form name="contactForm">
+				<input
+					type="text"
+					name="nom"
+					id="name"
+					placeholder="Nom*"
+					required
+					maxlength="200"
+					pattern="[a-zA-Z]+"
+				/>
+				<div id="errorName" class="error"></div>
+				<input
+					type="text"
+					name="prenom"
+					id="firstName"
+					placeholder="Prénom"
+					maxlength="200"
+					pattern="[a-zA-Z]+"
+				/>
+				<div id="errorFirstName" class="error"></div>
+				<input
+					type="email"
+					name="email"
+					id="mail"
+					placeholder="E-mail*"
+					required
+				/>
+				<div id="errorMail" class="error"></div>
+				<textarea
+					name="message"
+					id="message"
+					placeholder="Votre message ici"
+					spellcheck="true"
+					maxlength="2000"
+				></textarea>
+				<div id="errorMessage" class="error"></div>
+				<div class="buttonArea">
+					<button type="reset" id="reset">Effacer</button>
+					<button type="submit" id="submit">Envoyer</button>
+				</div>
+			</form>
+			<div id="modalContact" class="modal">
+				<div class="modalContactContent"></div>
+			</div>
+		</main>
+		<footer></footer>
+	</body>
+</html>
