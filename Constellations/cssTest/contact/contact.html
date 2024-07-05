@@ -74,8 +74,8 @@
 					id="name"
 					placeholder="Nom*"
 					required
-					maxlength="200"
-					pattern="[a-zA-Z]+"
+					pattern="^[a-zA-Zà-ÿÀ-Ÿ ]{1,200}$"
+					title="Votre nom ne peux pas contenir de chiffres ni dépasser 200 caractères"
 				/>
 				<div id="errorName" class="error"></div>
 				<input
@@ -83,8 +83,8 @@
 					name="prenom"
 					id="firstName"
 					placeholder="Prénom"
-					maxlength="200"
-					pattern="[a-zA-Z]+"
+					pattern="^[a-zA-Zà-ÿÀ-Ÿ ]{1,200}$"
+					title="Votre nom ne peux pas contenir de chiffres ni dépasser 200 caractères"
 				/>
 				<div id="errorFirstName" class="error"></div>
 				<input
@@ -100,7 +100,7 @@
 					id="message"
 					placeholder="Votre message ici"
 					spellcheck="true"
-					maxlength="2000"
+					maxlength="400"
 				></textarea>
 				<div id="errorMessage" class="error"></div>
 				<div class="buttonArea">
