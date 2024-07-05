@@ -1,0 +1,152 @@
+.home{
+    width: 10%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding-top: 1% ;
+    section{
+        border: solid 1px;
+        padding: 1%;
+        border-radius: 18px;
+        background-color: rgba(30, 27, 75, 0.5);
+    }
+}
+
+.FirstAdvice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8%;
+    width: 30%;
+    height: 45%;
+    
+    
+ 
+    
+}
+
+.tips{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+   
+    a{
+        font-weight: bold;
+    }
+}
+
+.material{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4%;
+    
+    
+}
+
+.list{
+    display: flex;
+    align-items: center;
+    height: 50%;
+    gap: 2%;
+    margin-bottom: 2%;
+    list-style-type: disc;
+    
+    ul{
+        padding-top: 1%;
+    }
+    li{
+        
+        padding-bottom: 5%;
+       
+        
+            
+    }
+
+    img{
+        padding-top: 1%;
+        height: 150%;
+        width: 100%;
+       
+        
+    }
+}
+
+ol{
+    li{
+        padding-bottom: 2%;}
+}
+
+
+
+.accordion-body{
+    width: 100%;
+}
+
+.accordion  .container{
+    width: 100%;
+    
+}
+
+.accordion .content{
+    img{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    header{
+        height: 8%;
+        h1{
+            font-size: 1rem;
+        }
+        
+    }
+    
+    .home{
+        width: 40%;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    .accordion{
+        width: 100%;
+        margin-left: 1%;
+        margin-right: 1%;
+        
+        
+    }
+
+    /* .accordion .container .active{
+        height: 100vh;
+        overflow: scroll;
+    } */
+
+
+   
+    .accordion .container.active .content{
+        overflow: scroll;
+        
+    } 
+
+    ol{
+       
+        
+        li{
+           
+            margin-bottom: 5%;
+            
+            
+        }
+    }
+    .accordion .content {
+        display: block;
+    }
+}
