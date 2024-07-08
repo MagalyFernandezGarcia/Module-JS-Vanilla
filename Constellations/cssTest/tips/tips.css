@@ -99,6 +99,12 @@ ol{
     }
 }
 
+
+.close{
+    padding: 1%;
+    top: 12%;
+}
+
 @media (max-width: 600px) {
     header{
         height: 8%;

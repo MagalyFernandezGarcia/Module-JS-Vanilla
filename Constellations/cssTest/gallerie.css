@@ -309,6 +309,7 @@ main{
     right: 27%;
     width: 2%;
     height: 5%;
+    padding: 1%;
     font-size: 2rem;
     color: white;
     background-color: var(--main-bg-color);
@@ -495,7 +496,7 @@ main{
         animation: traversePhone 300s linear 0s infinite;
     }
 
-    .accordion{
+    #accordion{
         width: 90%;
         margin-left: 5%;
         margin-top: 2%;
