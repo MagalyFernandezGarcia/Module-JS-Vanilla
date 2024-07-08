@@ -24,6 +24,10 @@ main{
         position: absolute;
 }
 
+.home{
+    width: 15%;
+}
+
 .hubble{
     height: 5%;
     position: absolute;
@@ -168,61 +172,22 @@ main{
     margin-left: 25%;
     margin-top: 12%;
 
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;}
+
+        .close{
+            top: 18%;
+            right: 25%;
+            padding: 0%;
+        }
+
    
   }
 
   
-  /* .modalConstellationContent {
-   background-color: #1e1b4b;
-    
-    width: 50%; 
-    height: 95%;
-    margin-left: 25%;
-    margin-top: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5%;
-    h2{
-        padding-top: 2%;
-    }
   
-  } */
-
-  /* .allInfo{
-    display: flex;
-    flex-direction: column;
-    gap: 1%;
-    height: 100%;
-    img{
-        width: 40%;
-        height: 90%;   
-        object-fit: cover;
-       
-    }
-    
-    
-  }
-
-  .alignInfoTitle{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1%;
-    min-height: 33%;
-    
-  }
-
-  .infoContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    height: 90%;
-
-  } */
 
   .accordion{
     width: 50%;
@@ -399,11 +364,17 @@ main{
 
     .modalHubbleContent{
       margin-top: 20%;
-      width: 100%;
+      width: 98%;
       height: 50%;
-      margin-left: 0%;
+      margin-left: 1%;
+      
       margin-top: 35%;
         
+      .close{
+        top: 11%;
+        right: 5%;
+      }
+     
         
     }
 

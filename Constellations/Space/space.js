@@ -58,7 +58,15 @@ hubble.addEventListener("pointerup", async () => {
 	modalHubble.style.display = "block";
 	const imageToDisplay = document.createElement("img");
 	imageToDisplay.src = imageOfSpace.hdurl;
-	modalHubbleContent.append(imageToDisplay);
+	const closeHubble = document.createElement("button");
+	closeHubble.innerText = "X";
+	closeHubble.className = "close";
+
+	modalHubbleContent.append(closeHubble, imageToDisplay);
+
+	closeHubble.addEventListener("click", () => {
+		modalHubble.style.display = "none";
+	});
 });
 
 const activateAccordion = () => {
@@ -127,6 +135,17 @@ IMG_CONSTELLATION.addEventListener("click", async () => {
 	divMythContainer.append(mythTitle, divMythAll);
 	const hrMyth = document.createElement("hr");
 
+	const observTitle = document.createElement("div");
+	observTitle.innerText = `Observing ${actualConst.name}`;
+	observTitle.className = "label";
+	const observInstruction = document.createElement("div");
+	observInstruction.innerText = actualConst.observation;
+	observInstruction.className = "content";
+	const divObservContainer = document.createElement("div");
+	divObservContainer.className = "container";
+	divObservContainer.append(observTitle, observInstruction);
+	const hrObs = document.createElement("hr");
+
 	accordionContent.append(
 		accordionTitle,
 		divDescriptionContainer,
@@ -134,70 +153,11 @@ IMG_CONSTELLATION.addEventListener("click", async () => {
 		divSchemaContainer,
 		hrSchema,
 		divMythContainer,
-		hrMyth
+		hrMyth,
+		divObservContainer,
+		hrObs
 	);
 	activateAccordion();
-
-	// const modalConstellationContent = document.querySelector(
-	// 	".modalConstellationContent"
-	// );
-	// modalConstellationContent.innerHTML = "";
-	// createAccordion();
-
-	// const modalConstellationContent = document.querySelector(
-	// 	".modalConstellationContent"
-	// );
-	// modalConstellationContent.innerHTML = "";
-	// const constellationInfo = await getConstellations();
-	// const actualConst = constellationInfo[currentIndex];
-	// const title = document.createElement("h2");
-	// title.innerText = constellationInfo[currentIndex].name;
-	// const allInfo = document.createElement("div");
-	// allInfo.className = "allInfo";
-
-	// const descriptionTitle = document.createElement("h3");
-	// descriptionTitle.innerText = "Small description";
-	// const imageOfStars = document.createElement("img");
-	// imageOfStars.src = actualConst.imageConstellation;
-	// const divText = document.createElement("div");
-	// divText.innerText = actualConst.quickDescription;
-	// const divDescription = document.createElement("div");
-	// divDescription.className = "infoContainer";
-	// divDescription.append(imageOfStars, divText);
-	// const divDescriptionAll = document.createElement("div");
-	// divDescriptionAll.append(descriptionTitle, divDescription);
-	// divDescriptionAll.className = "alignInfoTitle";
-
-	// const schemaTitle = document.createElement("h3");
-	// schemaTitle.innerText = "The stars that compose it";
-	// const divStarText = document.createElement("div");
-	// divStarText.innerText = actualConst.mostBrillantStars;
-	// const schemaOfStars = document.createElement("img");
-	// schemaOfStars.src = actualConst.imageStars;
-	// const divSchema = document.createElement("div");
-	// divSchema.className = "infoContainer";
-	// divSchema.append(divStarText, schemaOfStars);
-	// const divSchemaAll = document.createElement("div");
-	// divSchemaAll.className = "alignInfoTitle";
-	// divSchemaAll.append(schemaTitle, divSchema);
-
-	// const mythTitle = document.createElement("h3");
-	// mythTitle.innerText = `${actualConst.name} in mythologie`;
-	// const imageOfMyth = document.createElement("img");
-	// imageOfMyth.src = actualConst.imageMyth;
-	// const divTextMyth = document.createElement("div");
-	// divTextMyth.innerText = actualConst.mythology;
-	// const divMyth = document.createElement("div");
-	// divMyth.className = "infoContainer";
-	// divMyth.append(imageOfMyth, divTextMyth);
-	// const divMythAll = document.createElement("div");
-	// divMythAll.append(mythTitle, divMyth);
-	// divMythAll.className = "alignInfoTitle";
-
-	// allInfo.append(divDescriptionAll, divSchemaAll, divMythAll);
-	// modalConstellationContent.append(title, allInfo);
-
-	// modalConstellation.append(modalConstellationContent);
 });
 
 const closeButton = document.querySelector(".close");

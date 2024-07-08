@@ -178,7 +178,9 @@ button{
     border: 1px solid grey;
   }
 
+
   .accordion .container.active .content {
+
     height: 50vh;
   }
   

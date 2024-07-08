@@ -328,11 +328,11 @@
     "hemisphere" : "north"
 },
 {
-    "name": "Ophiucus",
-    "image": "../images/ophiucus.jpg",
-    "imageConstellation": "../images/ophiucus-constellation-stars.webp",
-    "imageStars": "../images/ophiucusStars.jpg",
-    "imageMyth": "../images/ophiucusMyth.jpg",
+    "name": "Ophiuchus",
+    "image": "../images/ophiuchus.jpg",
+    "imageConstellation": "../images/ophiuchus-constellation-stars.webp",
+    "imageStars": "../images/ophiuchusStars.jpg",
+    "imageMyth": "../images/ophiuchusMyth.jpg",
     "quickDescription" : "Ophiuchus, également connu sous le nom d’origine latine de Serpentaire, est une constellation de l'hémisphère nord traversée par le Soleil du 29 novembre au 18 décembre. Elle se situe entre le Scorpion à l'ouest et le Sagittaire à l'est. Représentant un homme portant un serpent à bout de bras, le Serpentaire divise la constellation du Serpent en deux parties : la tête et la queue.",
     "mostBrillantStars" : ["Ras alhague", "Cebalrai", "Yed Prior", "Yed Posterior", "Sabik", "Marfik"],
     "mythology" : "Ophiuchus, “The Serpent-Bearer”, represents Asclepius, a legendary physician who was the son of Apollo and Coronis.  He was educated by the centaur Chiron (see Centaurus), and was said to have learned the medicinal power of plants from a snake (see Serpens).  He became so skilled at healing that he could raise the dead.  This upset Hades, god of the underworld, who convinced Zeus to kill Asclepius.  Zeus struck him down with a thunderbolt and placed the healer in the night sky, along with his serpent, Serpens.",
@@ -371,7 +371,7 @@
 {
     "name": "Hydra",
     "image": "../images/hydra.jpg",
-    "imageConstellation": "../images/hydra-constellation-stars.jpg",
+    "imageConstellation": "../images/hydra-constellation-stars.webp",
     "imageStars": "../images/hydraStars.jpg",
     "imageMyth": "../images/hydraMyth.jpg",
     "quickDescription" : "Hydra constellation is the largest constellation in the sky and is located in the southern celestial hemisphere. It was first catalogued by the Greek astronomer Ptolemy in the 2nd century.",
