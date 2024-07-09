@@ -8,19 +8,21 @@ const getConstellations = async () => {
 	}
 };
 const createLinkName = (constellation) => {
-	const hemisphere = document.getElementById(constellation.hemisphere);
-	const season = document.querySelector(`.${constellation.season}`);
+	const hemisphere = document.querySelector(`.${constellation.hemisphere}`);
+	const season = hemisphere.querySelector(`.${constellation.season}`);
 
 	const newDiv = document.createElement("div");
+	const divName = document.createElement("div");
 	const starImg = document.createElement("img");
 	starImg.src = "../../images/whiteStar.png";
 	starImg.alt = "étoile blanche";
 	starImg.className = "whiteStar";
-	newDiv.innerText = constellation.name;
+	divName.innerText = constellation.name;
 
-	newDiv.append(starImg);
+	newDiv.className = "containerName";
+
+	newDiv.append(starImg, divName);
 	season.append(newDiv);
-	hemisphere.append(season);
 };
 
 const organiseConstellation = async () => {
@@ -34,3 +36,10 @@ const organiseConstellation = async () => {
 };
 
 organiseConstellation();
+const nameOfconst = document.querySelectorAll(".containerName");
+
+nameOfconst.forEach((constellation) => () => {
+	constellation.addEventListener("click", () => {
+		console.log("coucou");
+	});
+});

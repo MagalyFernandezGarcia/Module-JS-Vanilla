@@ -303,7 +303,7 @@
 },
 {
     "name": "Apus",
-    "image": "../images/apus.png",
+    "image": "../images/apus1.jpg",
     "imageConstellation": "../images/apus-constellation-stars.webp",
     "imageStars": "../images/apusStars.jpg",
     "imageMyth": "../images/apusMyth.jpg",
@@ -343,7 +343,7 @@
 },
 {
     "name": "Tucana",
-    "image": "../images/tucana.png",
+    "image": "../images/tucana1.jpg",
     "imageConstellation": "../images/tucana-constellation-stars.webp",
     "imageStars": "../images/tucanaStars.jpg",
     "imageMyth": "../images/tucanaMyth.jpg",
@@ -408,7 +408,7 @@
     "hemisphere" : "south"
 },
 {
-    "name": "crux",
+    "name": "Crux",
     "image": "../images/crux.jpg",
     "imageConstellation": "../images/crux-constellation-stars.webp",
     "imageStars": "../images/cruxStars.jpg",

@@ -2,6 +2,8 @@
     width: 13%;
 }
 
+
+
 main{
     display: flex;
     justify-content: center;
@@ -14,15 +16,19 @@ main{
         flex-direction: column;
         align-items: center;
         width: 40%;
-        gap: 5%;
+        
+        gap: 10%;
   
         background-color: rgba(30, 27, 75, 0.1);
         h3{
             padding-bottom: 2%;
         }
-        div{
+        /* div{
             padding-bottom: 1%;
-        }
+        } */
+
+        
+        
 
     }
     
@@ -31,10 +37,28 @@ main{
 .season{
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
+
+    .containerName {
+        width: 30%; /* ajouté */
+        padding: 4px; /* ajouté */
+        display: flex;
+        align-items: center;
+        gap: 1%;
+        
+       
+    }
+   
 
     
 }
 
+
+
 .whiteStar{
-    width: 2%;
+    width: 10%;
+}
+
+.containerName:hover{
+    cursor: pointer;
 }
