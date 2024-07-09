@@ -136,3 +136,22 @@ const closeButton = document.querySelector(".close");
 closeButton.addEventListener("click", () => {
 	modalConstellation.style.display = "none";
 });
+
+const northTitle = document.querySelector(".northTitle");
+const southTitle = document.querySelector(".southTitle");
+const northContent = document.getElementById("north");
+const southContent = document.getElementById("south");
+
+southTitle.addEventListener("click", () => {
+	northContent.style.display = "none";
+	southContent.style.display = "flex";
+	northTitle.style.opacity = "50%";
+	southTitle.style.opacity = "100%";
+});
+
+northTitle.addEventListener("click", () => {
+	southContent.style.display = "none";
+	northContent.style.display = "flex";
+	southTitle.style.opacity = "50%";
+	northTitle.style.opacity = "100%";
+});

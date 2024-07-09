@@ -15,7 +15,8 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 40%;
+        width: 30%;
+        
         
         gap: 10%;
   
@@ -23,15 +24,17 @@ main{
         h3{
             padding-bottom: 2%;
         }
-        /* div{
-            padding-bottom: 1%;
-        } */
-
-        
-        
 
     }
     
+}
+
+.hemisphere{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 10%;
+
 }
 
 .season{
@@ -40,8 +43,8 @@ main{
     flex-wrap: wrap;
 
     .containerName {
-        width: 30%; /* ajouté */
-        padding: 4px; /* ajouté */
+        width: 30%; 
+        padding: 4px; 
         display: flex;
         align-items: center;
         gap: 1%;
@@ -72,6 +75,80 @@ main{
     align-items: center;
 }
 
+
+
 @media (max-width: 600px){
+    header{
+        height: 10%;
+    }
+
+  main{
+    section{
+        gap: 5%;
+        h3{
+            padding-bottom: 8%;
+        }
+    }
+  }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .home{
+        width: 40%;
+    }
+
+    #south{
+        display: none;
+        gap: 3%;
+        margin-left: -105%;
+    }
+
+    .south{
+        h2{
+            opacity: 50%;
+        }
+    }
+
+#north{
+    width: 100vw;
     
+    gap: 3%;
+
+    .seasonContainer{
+     padding-left: 45%;
+     
+    }
+    .whiteStar{
+     width: 30%;
+    }
+    
+}
+.containerName{
+ margin-right: 17%;
+}
+
+  
+
+
+
+
+.accordion{
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 20%;
+    
+    
+}
+
+.close{
+    top: 10%;
+    right: 10%;
+}
+
+
+
+
 }
