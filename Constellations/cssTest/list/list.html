@@ -6,6 +6,9 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="../style.css" />
 		<link rel="stylesheet" href="./list.css" />
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script defer src="list.js"></script>
 	</head>
 	<body>
 		<header class="desktop">
@@ -74,216 +77,34 @@
 			</nav>
 		</header>
 		<main>
-			<section>
+			<section id="north">
 				<h2>Hémisphère nord</h2>
 				<div>
-					<h3 class="season">Constellations d'été</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Cygnus
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Lyra
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Aquila
-					</div>
+					<h3 class="season summer">Constellations d'été</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations d'automne</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Cassiopée
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Pégase
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Andromède
-					</div>
+					<h3 class="season autumn">Constellations d'automne</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations d'hiver</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Orion
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Grand Chien
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Taurus
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Aries
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Gemini
-					</div>
+					<h3 class="season winter">Constellations d'hiver</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations du printemps</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Leo
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Vierge
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Grande Ourse
-					</div>
+					<h3 class="season spring">Constellations du printemps</h3>
 				</div>
 			</section>
-			<section>
+			<section id="south">
 				<h2>Hémisphère sud</h2>
 				<div>
-					<h3 class="season">Constellations d'été</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Hydra
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Eridanus
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Puppis
-					</div>
+					<h3 class="season summer">Constellations d'été</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations d'automne</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Crux
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Centaurus
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Carina
-					</div>
+					<h3 class="season autumn">Constellations d'automne</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations d'hiver</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Scorpion
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Sagittaire
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Ophiuchus
-					</div>
+					<h3 class="season winter">Constellations d'hiver</h3>
 				</div>
 				<div>
-					<h3 class="season">Constellations du printemps</h3>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Tucana
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Aquarius
-					</div>
-					<div>
-						<img
-							src="../../images/whiteStar.png"
-							alt="étoile blanche"
-							class="whiteStar"
-						/>Cetus
-					</div>
+					<h3 class="season spring">Constellations du printemps</h3>
 				</div>
 			</section>
 		</main>
