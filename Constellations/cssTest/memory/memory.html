@@ -5,9 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="../style.css" />
-		<link rel="stylesheet" href="./list.css" />
-		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script defer src="list.js"></script>
+		<link rel="stylesheet" href="./memory.css" />
+		<script defer src="memory.js"></script>
 		<script defer src="../BurgerMenu.js"></script>
 	</head>
 	<body>
@@ -16,11 +15,11 @@
 				<a href="../gallerie.html" class="home">
 					<img src="../../images/logo.svg" alt="logo" class="logo" />
 				</a>
-				<h1>Liste des constellations</h1>
+				<h1>Memory</h1>
 			</div>
 			<div>
 				<a href="../presentation/presentation.html">Présentation du site</a>
-				<a href="./list.html">Liste</a>
+				<a href="../list/list.html">Liste</a>
 				<a href="../tips/tips.html">Tips</a>
 				<a href="../memory/memory.html">Memory</a>
 				<a href="../contact/contact.html">Contact</a>
@@ -31,7 +30,7 @@
 				<a href="../gallerie.html" class="home">
 					<img src="../../images/logo.svg" alt="logo" class="logo" />
 				</a>
-				<h1>Liste des constellations</h1>
+				<h1>Memory</h1>
 			</div>
 			<div class="offScreenMenu">
 				<div class="links">
@@ -86,54 +85,18 @@
 			</nav>
 		</header>
 		<main>
-			<section class="north">
-				<h2 class="northTitle">Hémisphère nord</h2>
-				<div class="hemisphere" id="north">
-					<div class="seasonContainer">
-						<h3>Constellations d'été</h3>
-						<div class="season summer"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations d'automne</h3>
-						<div class="season autumn"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations d'hiver</h3>
-						<div class="season winter"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations du printemps</h3>
-						<div class="season spring"></div>
-					</div>
-				</div>
+			<section class="up">
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
 			</section>
-			<section class="south">
-				<h2 class="southTitle">Hémisphère sud</h2>
-				<div class="hemisphere" id="south">
-					<div class="seasonContainer">
-						<h3>Constellations d'été</h3>
-						<div class="season summer"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations d'automne</h3>
-						<div class="season autumn"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations d'hiver</h3>
-						<div class="season winter"></div>
-					</div>
-					<div class="seasonContainer">
-						<h3>Constellations du printemps</h3>
-						<div class="season spring"></div>
-					</div>
-				</div>
+			<section class="down">
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
+				<div class="card"></div>
 			</section>
-			<div id="modalConstellation" class="modal">
-				<div class="accordion-body">
-					<button class="close">X</button>
-					<div class="accordion" id="accordion"></div>
-				</div>
-			</div>
 		</main>
 		<footer></footer>
 	</body>
