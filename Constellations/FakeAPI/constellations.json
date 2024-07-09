@@ -45,7 +45,7 @@
 "hemisphere" : "north"},
 {
     "name": "Orion",
-    "image": "../images/orion.jpg",
+    "image": "../images/orion1.jpg",
     "imageConstellation": "../images/orion-constellation-stars.webp",
     "imageStars": "../images/orionStars.webp",
     "imageMyth": "../images/orionMyth.jpg",
@@ -99,7 +99,7 @@
 },
 {
     "name": "Gemini",
-    "image": "../images/gemini.jpg",
+    "image": "../images/gemini1.jpg",
     "imageConstellation": "../images/gemini-constellation-stars.jpg",
     "imageStars": "../images/geminiStars.jpg",
     "imageMyth": "../images/geminiMyth.jpg",
@@ -383,7 +383,7 @@
 },
 {
     "name": "Eridanus",
-    "image": "../images/eridanus.jpg",
+    "image": "../images/eridanus.png",
     "imageConstellation": "../images/eridanus-constellation-stars.webp",
     "imageStars": "../images/eridanusStars.png",
     "imageMyth": "../images/eridanusMyth.jpg",

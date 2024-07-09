@@ -48,8 +48,6 @@ main{
         
        
     }
-   
-
     
 }
 
@@ -61,4 +59,19 @@ main{
 
 .containerName:hover{
     cursor: pointer;
+}
+
+.close{
+    padding: 1%;
+
+}
+
+.seasonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 600px){
+    
 }
