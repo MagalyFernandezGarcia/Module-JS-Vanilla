@@ -6,9 +6,10 @@ let count = 0;
 const initialise = () => {
 	cardAll.forEach((card) => {
 		const newImg = document.createElement("img");
-		window.addEventListener("load", () => {
-			newImg.src = "../../images/backCard.jpg";
-		});
+		newImg.src = "../../images/backCard.jpg";
+		// window.addEventListener("load", () => {
+		// 	newImg.src = "../../images/backCard.jpg";
+		// });
 		newImg.className = "imgCard";
 		newImg.id = count;
 		card.innerHTML = "";
@@ -23,6 +24,8 @@ const initialise = () => {
 const getConstellations = async () => {
 	try {
 		const res = await axios.get(jsonAPi + "constellations");
+		 console.log(await res)
+		// await new Promise((res) => setTimeout(() => {res()}, 3000))
 		return res.data;
 	} catch (error) {
 		console.error(error);
@@ -51,6 +54,7 @@ const arrayOfrandomConstellations = async () => {
 	return finalArray;
 };
 const flipCard = (urls) => {
+	console.log(urls);
 	let counterClick = 0;
 	cardAll.forEach((card, index) => {
 		card.addEventListener("click", () => {
@@ -83,7 +87,7 @@ const selectImg = async (array) => {
 	allImgCards.forEach((img) => {
 		const random = Math.floor(Math.random() * waitedArray.length);
 
-		img.src = `../${waitedArray[random].imageConstellation}`;
+		// img.src = `../${waitedArray[random].imageConstellation}`;
 		arrayofUrl.push(`../${waitedArray[random].imageConstellation}`);
 		waitedArray.splice(random, 1);
 	});
@@ -120,7 +124,7 @@ const compareCards = () => {
 		}, 1000);
 	}
 
-	if (victoryCount === 1) {
+	if (victoryCount === 4) {
 		const main = document.querySelector("main");
 		const winTextDiv = document.createElement("h2");
 		winTextDiv.innerText = "Félicitation, vous avez gagné!";
