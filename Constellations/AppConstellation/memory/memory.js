@@ -7,16 +7,16 @@ const initialise = () => {
 	cardAll.forEach((card) => {
 		const newImg = document.createElement("img");
 		newImg.src = "../../images/backCard.jpg";
-		// window.addEventListener("load", () => {
-		// 	newImg.src = "../../images/backCard.jpg";
-		// });
+
 		newImg.className = "imgCard";
 		newImg.id = count;
 		card.innerHTML = "";
 		card.classList.add("back");
-		card.style.display = "block";
+
 		card.append(newImg);
 		count++;
+
+		// newImg.hidden = true;
 	});
 	selectImg(arrayOfrandomConstellations());
 };
@@ -24,8 +24,7 @@ const initialise = () => {
 const getConstellations = async () => {
 	try {
 		const res = await axios.get(jsonAPi + "constellations");
-		 console.log(await res)
-		// await new Promise((res) => setTimeout(() => {res()}, 3000))
+
 		return res.data;
 	} catch (error) {
 		console.error(error);
@@ -53,8 +52,8 @@ const arrayOfrandomConstellations = async () => {
 
 	return finalArray;
 };
+
 const flipCard = (urls) => {
-	console.log(urls);
 	let counterClick = 0;
 	cardAll.forEach((card, index) => {
 		card.addEventListener("click", () => {
@@ -66,12 +65,8 @@ const flipCard = (urls) => {
 
 				card.classList.remove("back");
 				card.classList.add("front");
-			} else {
-				imgCard.src = "../../images/backCard.jpg";
-
-				card.classList.remove("front");
-				card.classList.add("back");
 			}
+
 			if (counterClick === 2) {
 				compareCards();
 				counterClick = 0;
@@ -84,10 +79,9 @@ const selectImg = async (array) => {
 	const waitedArray = await array;
 	const allImgCards = document.querySelectorAll(".imgCard");
 	const arrayofUrl = [];
-	allImgCards.forEach((img) => {
+	allImgCards.forEach(() => {
 		const random = Math.floor(Math.random() * waitedArray.length);
 
-		// img.src = `../${waitedArray[random].imageConstellation}`;
 		arrayofUrl.push(`../${waitedArray[random].imageConstellation}`);
 		waitedArray.splice(random, 1);
 	});
@@ -108,8 +102,8 @@ const compareCards = () => {
 		setTimeout(() => {
 			flippedCards.forEach((flippedCard) => {
 				flippedCard.classList.remove("front");
-				flippedCard.classList.add("back");
-				flippedCard.style.display = "none";
+				flippedCard.classList.add("gg");
+				flippedCard.querySelector("img").hidden = true;
 			});
 		}, 1000);
 		victoryCount++;
@@ -138,6 +132,7 @@ const compareCards = () => {
 
 		resetBtn.addEventListener("click", () => {
 			count = 0;
+			victoryCount = 0;
 
 			initialise();
 			winDiv.style.display = "none";

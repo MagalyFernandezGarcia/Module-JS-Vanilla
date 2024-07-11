@@ -96,7 +96,7 @@ ol{
 }
 
 .accordion .content{
-    /* padding-left: 3%; */
+    
     img{
         width: 50%;
         
@@ -113,7 +113,7 @@ ol{
     header{
         height: 8%;
         h1{
-            font-size: 1rem;
+            font-size: 1.25rem;
         }
         
     }

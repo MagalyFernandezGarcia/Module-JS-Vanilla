@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.home{
+    width: 14%;
+}
 
 main{
     display: flex;
@@ -67,6 +70,12 @@ main{
 
     header{
         height: 8%;
+    }
+    .home{
+        width: 40%;
+    }
+    h1{
+        font-size: 1.75rem;
     }
 
     main{

@@ -316,7 +316,9 @@ main{
         font-size: 1.75rem;
     }
 
-  
+  header{
+    height: 8%;
+  }
     
 
     .moreInfo{
@@ -350,7 +352,7 @@ main{
 
     .chevronLeft{
         top: 78.5%;
-        left: 35%;
+        left: 20%;
         opacity: 90%;
         
         
@@ -358,7 +360,7 @@ main{
 
     .chevronRight{
         top: 78.5%;
-        right: 35%;
+        right: 20%;
         opacity: 90%;
     }
 
