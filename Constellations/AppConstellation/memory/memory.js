@@ -146,7 +146,9 @@ const compareCards = () => {
 				card.classList.remove("flip");
 				card.querySelector("img").hidden = false;
 			});
+
 			initialise();
+			winDiv.style.display = "none";
 		});
 	}
 	console.log(victoryCount);
