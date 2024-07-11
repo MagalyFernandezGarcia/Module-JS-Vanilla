@@ -3,7 +3,7 @@ const jsonAPi = "http://localhost:3000/";
 
 let count = 0;
 
-const initialise = () => {
+const initialise = async () => {
 	cardAll.forEach((card) => {
 		const newImg = document.createElement("img");
 		newImg.src = "../../images/backCard.jpg";
@@ -15,8 +15,6 @@ const initialise = () => {
 
 		card.append(newImg);
 		count++;
-
-		// newImg.hidden = true;
 	});
 	selectImg(arrayOfrandomConstellations());
 };
@@ -61,6 +59,8 @@ const flipCard = (urls) => {
 			const imgCard = document.getElementById(index);
 
 			if (card.classList.contains("back")) {
+				card.classList.remove("flipBack");
+				card.classList.add("flip");
 				imgCard.src = urls[index];
 
 				card.classList.remove("back");
@@ -101,15 +101,20 @@ const compareCards = () => {
 	if (urlArray[0] === urlArray[1]) {
 		setTimeout(() => {
 			flippedCards.forEach((flippedCard) => {
-				flippedCard.classList.remove("front");
-				flippedCard.classList.add("gg");
-				flippedCard.querySelector("img").hidden = true;
+				flippedCard.classList.add("slide");
+				setTimeout(() => {
+					flippedCard.classList.remove("front");
+					flippedCard.classList.add("gg");
+					flippedCard.querySelector("img").hidden = true;
+				}, 500);
 			});
 		}, 1000);
 		victoryCount++;
 	} else {
 		setTimeout(() => {
 			flippedCards.forEach((flippedCard) => {
+				flippedCard.classList.remove("flip");
+				flippedCard.classList.add("flipBack");
 				const imageFlipped = flippedCard.querySelector(".imgCard");
 				flippedCard.classList.remove("front");
 				flippedCard.classList.add("back");
@@ -119,24 +124,31 @@ const compareCards = () => {
 	}
 
 	if (victoryCount === 4) {
+		const resetBtn = document.createElement("button");
 		const main = document.querySelector("main");
 		const winTextDiv = document.createElement("h2");
-		winTextDiv.innerText = "Félicitation, vous avez gagné!";
-		const resetBtn = document.createElement("button");
-		resetBtn.innerText = "Fermer";
-		resetBtn.className = "reset";
 		const winDiv = document.createElement("div");
-		winDiv.className = "winDiv";
-		winDiv.append(winTextDiv, resetBtn);
-		main.append(winDiv);
+		setTimeout(() => {
+			winTextDiv.innerText = "Félicitation, vous avez gagné!";
+			resetBtn.innerText = "Fermer";
+			resetBtn.className = "reset";
+			winDiv.className = "winDiv";
+			winDiv.append(winTextDiv, resetBtn);
+			main.append(winDiv);
+		}, 1500);
 
-		resetBtn.addEventListener("click", () => {
-			count = 0;
+		resetBtn.addEventListener("click", async () => {
 			victoryCount = 0;
-
+			count = 0;
+			cardAll.forEach((card) => {
+				card.classList.remove("slide");
+				card.classList.remove("gg");
+				card.classList.remove("flip");
+				card.querySelector("img").hidden = false;
+			});
 			initialise();
-			winDiv.style.display = "none";
 		});
 	}
+	console.log(victoryCount);
 };
 initialise();
